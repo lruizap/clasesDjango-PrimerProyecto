@@ -1,0 +1,47 @@
+# Entorno virtual
+venv/
+env/
+.venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Archivos de configuración privados
+.env
+*.env
+*.ini
+*.cfg
+
+# Archivos de logs
+*.log
+
+# Archivos de base de datos de desarrollo
+db.sqlite3
+
+# Cache de Django
+*.pot
+*.pyc
+*.mo
+
+# Archivos creados por Django
+staticfiles/
+media/
+
+# Archivos de migraciones (opcional, si no quieres ignorarlas, quita esta línea)
+# **/migrations/*.py
+# **/migrations/
+
+# Archivos de VSCode
+.vscode/
+
+# Carpetas de MacOS / Windows
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+build/
+dist/
