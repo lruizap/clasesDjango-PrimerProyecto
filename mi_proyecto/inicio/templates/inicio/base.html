@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi Proyecto{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>{% block titleH1 %}Mi Proyecto Django{% endblock %}</h1>
+        <nav>
+            <a href="{% url 'inicio:inicio' %}">Inicio</a> |
+            <a href="{% url 'inicio:contacto' %}">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Derechos reservados &copy; 2025</p>
+    </footer>
+</body>
+</html>
