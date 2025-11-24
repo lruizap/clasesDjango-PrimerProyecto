@@ -9,12 +9,25 @@
 <p>Puedes enviarnos un correo a <strong>contacto@midominio.com</strong>.</p>
 <form action="" method="post">
     {% csrf_token %}
-    <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" name="nombre"><br><br>
 
-    <label for="mensaje">Mensaje:</label><br>
-    <textarea id="mensaje" name="mensaje"></textarea><br><br>
+    {{ form.as_div }}
 
-    <input type="submit" value="Enviar">
+    {% comment %} 
+    
+    <label>Nombre:</label>
+    {{ form.nombre }}
+
+    <label>Email:</label>
+    {{ form.email }}
+
+    <label>Mensaje:</label>
+    {{ form.mensaje }}
+
+    <button type="submit">Enviar</button> 
+    
+    {% endcomment %}
+
+    <button type="submit"> Enviar Contacto</button>
+
 </form>
 {% endblock %}

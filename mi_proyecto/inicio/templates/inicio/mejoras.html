@@ -1,0 +1,18 @@
+{% extends "inicio/base.html" %}
+
+{% block title %}Mejoras{% endblock %}
+
+{% block titleH1 %}Mejoras{% endblock %}
+
+{% block content %}
+<h2>Mejoras</h2>
+<p>Puedes enviarnos un correo a <strong>contacto@midominio.com</strong>.</p>
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{ form.as_div }}
+
+    <button type="submit"> Enviar Mejora</button>
+
+</form>
+{% endblock %}

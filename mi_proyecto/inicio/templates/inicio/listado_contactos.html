@@ -1,0 +1,40 @@
+{% extends "inicio/base.html" %}
+
+{% block title %}Listado de Contactos{% endblock %}
+
+{% block titleH1 %}Listado de Constactos{% endblock %}
+
+{% block content %}
+<h2>Listado de Contacto</h2>
+
+<form method="get" style="margin-bottom: 20px;">
+    <input type="text" name="buscar" placeholder="Buscar por nombre o email" value="{{ buscar }}">
+    <button type="submit">Buscar</button>
+
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Mensaje</th>
+            <th>URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contacto in contactos %}
+        <tr>
+            <td>{{ contacto.nombre }}</td>
+            <td>{{ contacto.email }}</td>
+            <td>{{ contacto.mensaje }}</td>
+            <td><a href={% url 'inicio:detalle_contacto' contacto.id %}>Enlace</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No se encontraron contactos.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+{% endblock %}

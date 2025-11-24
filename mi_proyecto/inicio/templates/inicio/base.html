@@ -8,7 +8,9 @@
         <h1>{% block titleH1 %}Mi Proyecto Django{% endblock %}</h1>
         <nav>
             <a href="{% url 'inicio:inicio' %}">Inicio</a> |
-            <a href="{% url 'inicio:contacto' %}">Contacto</a>
+            <a href="{% url 'inicio:contacto' %}">Contacto</a> |
+            <a href="{% url 'inicio:listado_contactos' %}">Listado de Contacto</a> |
+            <a href="{% url 'inicio:mejoras' %}">Mejoras</a>
         </nav>
     </header>
 

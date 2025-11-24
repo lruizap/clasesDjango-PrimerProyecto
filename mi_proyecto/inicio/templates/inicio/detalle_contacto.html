@@ -1,0 +1,12 @@
+{% extends "inicio/base.html" %}
+
+{% block content %}
+<h2>Detalle del contacto</h2>
+
+<p><strong>Nombre:</strong> {{ contacto.nombre }}</p>
+<p><strong>Email:</strong> {{ contacto.email }}</p>
+<p><strong>Mensaje:</strong><br>{{ contacto.mensaje }}</p>
+<p><strong>Fecha:</strong> {{ contacto.creado }}</p>
+
+<a href="{% url 'inicio:listado_contactos' %}">Volver</a>
+{% endblock %}
